@@ -4,7 +4,7 @@ import "base.proto";           // подключаем описания protobuf
 import "articles_base.proto";  // Файлы base.proto и articles_base.proto встроены в компилятор.
                                // Их необходимо включать в начало любого gzt-словаря.
 
-TAuxDicArticle "смех_глаголы"
+TAuxDicArticle "смех"
 {
-    key = { "tomita:verbs.cxx" type=CUSTOM }
+    key = { "tomita:all.cxx" type=CUSTOM }
 }
