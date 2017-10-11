@@ -21,18 +21,8 @@ python3 lst2gram.py list.txt
 Файл ```output_string.txt``` создаётся в той же директории, где лежит скрипт.
 
 
-## makeatabe.py
+## makeatable_2.py
 
 скрипт для создания таблички сравнения. 
 
-Чтобы запустить, нужно положить в папку со скриптом ```PrettyOutput.html``` и папку ```2206```. Затем внутри скрипта нужно заменить 
-```
-ct = codecs.open('table_1.csv', 'w', 'utf-8')
-```
-на 
-
-```
-ct = codecs.open('table_ВАШ МОТИВ.csv', 'w', 'utf-8')
-```
-
-и запустить скрипт.
+Чтобы запустить, нужно положить в папку со скриптом ```PrettyOutput.html``` и папку ```2206```. Затем нужно выполнить в командной строке 'python makeatable_2.py -o PrettyOutput.html --folder 2206'.
