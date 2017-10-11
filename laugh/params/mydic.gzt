@@ -8,3 +8,11 @@ TAuxDicArticle "смех"
 {
     key = { "tomita:all.cxx" type=CUSTOM }
 }
+TAuxDicArticle "глагол-смеха"
+{
+    key = { "verbs.txt" type=FILE }
+}
+TAuxDicArticle "существительное-смеха"
+{
+    key = { "nouns.txt" type=FILE }
+}
