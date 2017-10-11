@@ -30,7 +30,7 @@ for fil in os.listdir('./2206'):
 
 print(arr[372], arr[371], arr[373])
 
-ct = open('table_1.csv', 'w', 'utf-8')
+ct = open('results_table.tsv', 'w', 'utf-8')
 for el in range(len(arr)):
     ct.write(str(el) + '\t' + str(arr[el]) + '\r\n')
 
