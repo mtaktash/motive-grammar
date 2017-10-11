@@ -25,4 +25,4 @@ python3 lst2gram.py list.txt
 
 скрипт для создания таблички сравнения. 
 
-Чтобы запустить, нужно положить в папку со скриптом ```PrettyOutput.html``` и папку ```2206```. Затем нужно выполнить в командной строке 'python makeatable_2.py -o PrettyOutput.html --folder 2206'.
+Чтобы запустить, нужно положить в папку со скриптом ```PrettyOutput.html``` и папку ```2206```. Затем нужно выполнить в командной строке ```python makeatable_2.py -o PrettyOutput.html --folder 2206```.
