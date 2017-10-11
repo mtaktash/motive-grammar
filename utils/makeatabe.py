@@ -1,7 +1,7 @@
 # -*- codind: utf-8 -*-
-import codecs
+
 import os
-f = codecs.open('PrettyOutput.html', 'r', 'utf-8')
+f = open('PrettyOutput.html', 'r', 'utf-8')
 lines = f.readlines()
 arr = [0 for i in range(1064)]
 results = []
@@ -18,19 +18,19 @@ for line in lines:
 
 print(results)
 for fil in os.listdir('./2206'):
-    f1 = codecs.open('./2206/' + fil, 'r', 'utf-8')
+    f1 = open('./2206/' + fil, 'r', 'utf-8')
     ft = f1.read()
-    if fil == '372.txt':
-        print(ft)
+#    if fil == '372.txt':
+#        print(ft)
     for res in results:
         if res in ft:
-            arr[int(fil[:-4]) - 1] = 1
+            arr[int(fil[:-4]) - 1] += 1
             print(res, fil)
     f1.close()
 
 print(arr[372], arr[371], arr[373])
 
-ct = codecs.open('table_1.csv', 'w', 'utf-8')
+ct = open('results_table.tsv', 'w', 'utf-8')
 for el in range(len(arr)):
     ct.write(str(el) + '\t' + str(arr[el]) + '\r\n')
 
