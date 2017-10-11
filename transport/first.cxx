@@ -1,8 +1,6 @@
 #encoding "utf8"
 #GRAMMAR_ROOT S
 
-MeansOfTransport -> 'трамвай' | 'автомобиль' | 'машина';
-
 MotionVerb -> Verb<kwtype='глаголы_передвижения'>;
 MotionPrepAbl -> 'в' | 'во' | 'на';
 MotionPrepDat -> 'к' | 'ко';
@@ -15,6 +13,11 @@ Subject -> ProperName;
 
 TargetedMotion -> Subject MotionVerb AnyWord* MotionTarget;
 
+TransportUnit -> Noun<kwtype='транспорт'>;
+MechTransportVerb -> 'ехать' | 'останавливаться' | 'мчаться' | 'подъезжать' | 'стучать' | 'поехать';
+TransportMovement -> (AnyWord) (AnyWord) (AnyWord) (AnyWord) TransportUnit Adv* Adj* MotionVerb (MotionTarget);
+
+
 // S -> TargetedMotionAbl | TargetedMotionDat;
 
-S -> TargetedMotion;
+S -> TransportMovement;
