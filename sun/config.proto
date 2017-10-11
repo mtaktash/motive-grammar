@@ -6,12 +6,12 @@ TTextMinerConfig {
   PrettyOutput = "PrettyOutput.html"; // путь к файлу с отладочным выводом в удобном для чтения виде
 
   Input = {
-    File = "master.txt"; // путь к входному файлу
+    Dir = "/home/anna/Desktop/2206"; // путь к входному файлу
   }
 
   Output = {
-    File = "weather.xml";
-    Format = xml;        // можно использовать следующие форматы:
+    File = "weather.txt";
+    Format = text;        // можно использовать следующие форматы:
                           // proto (Google Protobuf), xml, text
   }
 
