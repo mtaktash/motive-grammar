@@ -16,7 +16,6 @@
 
 ```
 python3 lst2gram.py list.txt 
-
 ```
 
 Файл ```output_string.txt``` создаётся в той же директории, где лежит скрипт.
