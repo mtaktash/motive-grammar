@@ -1,3 +1,6 @@
+import "base.proto";
+import "articles_base.proto";
+
 TAuxDicArticle "глаголы_передвижения"
 {
     key = { "verbs.txt" type=FILE }
