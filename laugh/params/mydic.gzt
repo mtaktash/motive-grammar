@@ -6,7 +6,7 @@ import "articles_base.proto";  // Файлы base.proto и articles_base.proto �
 
 TAuxDicArticle "смех"
 {
-    key = { "tomita:all.cxx" type=CUSTOM }
+    key = { "tomita:main.cxx" type=CUSTOM }
 }
 TAuxDicArticle "глагол-смеха"
 {
@@ -15,4 +15,12 @@ TAuxDicArticle "глагол-смеха"
 TAuxDicArticle "существительное-смеха"
 {
     key = { "nouns.txt" type=FILE }
+}
+TAuxDicArticle "наречие-смеха"
+{
+    key = { "adverbs.txt" type=FILE }
+}
+TAuxDicArticle "прилагательное-смеха"
+{
+    key = { "adjectives.txt" type=FILE }
 }

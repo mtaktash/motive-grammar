@@ -2,11 +2,19 @@
 #GRAMMAR_ROOT S
 
 MeansOfTransport -> 'трамвай' | 'автомобиль' | 'машина';
-MotionVerb -> 'идти' | 'бежать' | 'броситься' | 'двинуть' | 'ползти' | 
-              'приближаться' | 'кидать' | 'бросать' | 'вести';
-TargetPrep -> 'до' | 'к' | 'ко' | 'в';
 
-GeneralMotion -> Noun+ MotionVerb;
-TargetedMotion -> Adj<gram='им'>* Noun* MotionVerb AnyWord* TargetPrep Adj* Noun<gram='пр'>;
+MotionVerb -> Verb<kwtype='глаголы_передвижения'>;
+MotionPrepAbl -> 'в' | 'во' | 'на';
+MotionPrepDat -> 'к' | 'ко';
+MotionTarget -> MotionPrepAbl Adj<c-agr[2]>* Noun<gram='вин', c-agr[2]>;
+MotionTarget -> MotionPrepDat Adj<c-agr[2]>* Noun<gram='дат', c-agr[2]>;
 
-S -> GeneralMotion;
+Subject -> Adj<gram='им', c-agr[1]>* AnyWord<c-agr[1]>;
+ProperName -> Noun<h-reg1>+;
+Subject -> ProperName;
+
+TargetedMotion -> Subject MotionVerb AnyWord* MotionTarget;
+
+// S -> TargetedMotionAbl | TargetedMotionDat;
+
+S -> TargetedMotion;
