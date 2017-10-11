@@ -6,38 +6,18 @@ Who -> ProperName | Noun;
 
 LaughVerbs -> Verb<kwtype="глагол-смеха">;	
 LaughNouns -> Noun<kwtype="существительное-смеха">;	
+LaughAdvs -> Adv<kwtype="наречие-смеха">;	
+LaughAdjs -> Adv<kwtype="прилагательное-смеха">;	
+
 
 LaughWithVerb -> Adv* Word* LaughVerbs Word* Adv*;
 LaughWithNoun -> Verb Adj* LaughNouns;
-
-Laugh -> LaughWithVerb | LaughWithNoun;
-
-S -> Word* Comma* Who Laugh Comma* Word*;
-
+LaughAction -> LaughWithVerb | LaughWithNoun;
+S -> Word* Comma* Who LaughAction Comma* Word*;
+S -> Word* Comma* LaughAction Who Comma* Word*;
 
 
+// S -> Word* Comma* Word* LaughAdvs Word* Comma* Word*;
 
-
-
-
-
-// // существительные
-// S ->  Adj+ LaughNouns;  
-// S ->  Verb LaughNouns;  
-// S ->  Verb Adj+ LaughNouns;
-
-// S ->  Person Verb LaughNouns;    
-// S ->  Person Verb Adj+ LaughNouns;    
-
-
-// // глаголы
-// S ->  Person LaughVerbs;  
-// S ->  Noun LaughVerbs;  
-// // над чем
-// S ->  Person LaughVerbs Prep Noun;  
-
-// // как  
-// S ->  Person Adv LaughVerbs;  
-// S ->  Noun Adv LaughVerbs;   
-
-
+// LaughObject -> LaughAdjs<gnc-agr[1]>+ Noun<gnc-agr[1]> | Noun<gnc-agr[1]> LaughAdjs<gnc-agr[1]>+;
+// S -> Word* Comma* Word* LaughObject Word* Comma* Word*;

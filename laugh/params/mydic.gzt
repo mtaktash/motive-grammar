@@ -16,3 +16,11 @@ TAuxDicArticle "существительное-смеха"
 {
     key = { "nouns.txt" type=FILE }
 }
+TAuxDicArticle "наречие-смеха"
+{
+    key = { "adverbs.txt" type=FILE }
+}
+TAuxDicArticle "прилагательное-смеха"
+{
+    key = { "adjectives.txt" type=FILE }
+}
