@@ -13,3 +13,11 @@ laugh/params/mydic.gzt.bin
 laugh/PrettyOutput.html
 *.html
 laugh/simple_keywords_finder/config.proto
+results/.ipynb_checkpoints/MotiveDynamics-checkpoint.ipynb
+laugh/simple_keywords_finder/config.proto
+*.proto
+laugh/.ipynb_checkpoints/AnalyzeResults-checkpoint.ipynb
+laugh/motive_finder/config.proto
+laugh/motive_finder/config.proto
+laugh/simple_keywords_finder/config.proto
+laugh/motive_finder/config.proto
