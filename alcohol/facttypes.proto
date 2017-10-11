@@ -8,3 +8,28 @@ message Drinking: NFactType.TFact
   optional string Consuming = 2;
   optional string Drink = 3;
 }
+
+message PassiveDrinking:  NFactType.TFact 
+{
+  optional string Situation = 1;
+}
+
+message DrankPerson:  NFactType.TFact 
+{
+  optional string Who = 1;
+  optional string How = 2;
+}
+
+message VerbDrinking:  NFactType.TFact 
+{
+  optional string Who = 1;
+  optional string Consuming = 2;
+  optional string Drink = 3;
+}
+
+
+message VesselOfLiquid:  NFactType.TFact 
+{
+  optional string Vess = 1;
+  optional string Drink = 2;
+}
