@@ -1,5 +1,5 @@
 # -*- codind: utf-8 -*-
-import codecs
+
 import os
 f = open('PrettyOutput.html', 'r', 'utf-8')
 lines = f.readlines()
@@ -20,8 +20,8 @@ print(results)
 for fil in os.listdir('./2206'):
     f1 = open('./2206/' + fil, 'r', 'utf-8')
     ft = f1.read()
-    if fil == '372.txt':
-        print(ft)
+#    if fil == '372.txt':
+#        print(ft)
     for res in results:
         if res in ft:
             arr[int(fil[:-4]) - 1] += 1
