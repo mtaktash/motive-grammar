@@ -1,4 +1,5 @@
 import "base.proto";
 import "articles_base.proto";
 
-message alco : TAuxDicArticle {}
+message alco : TAuxDicArticle {};
+message pers : TAuxDicArticle {}
