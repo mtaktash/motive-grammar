@@ -49,5 +49,5 @@ if __name__ == '__main__':
 				'q': q,
 			})
 	df = pd.DataFrame(data)
-	df = df[['text', 'q']].sort('text')
+	df = df[['text', 'q']].sort_values(by='text')
 	df.to_csv('table.tsv', sep='\t', index=False)
