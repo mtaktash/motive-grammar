@@ -19,5 +19,5 @@ DrVerb -> Verb<kwtype=drverbs>;
 SDrVerb -> Verb<kwtype=sdrverbs>;
 S -> Who<sp-agr[1],gram='anim'>* interp (VerbDrinking.Who) AnyWord* DrVerb<sp-agr[1],gram="intr"> interp (VerbDrinking.Consuming);
 S -> Who<sp-agr[1],gram='anim'>* interp (VerbDrinking.Who) AnyWord* DrVerb<sp-agr[1],gram="tran"> interp (VerbDrinking.Consuming) Someword* Noun<gram='acc'> interp (VerbDrinking.Drink);
-S -> Who<sp-agr[1],gram='anim'>* interp (VerbDrinking.Who) AnyWord* SDrVerb<sp-agr[1],gram="tran"> interp (VerbDrinking.Consuming) Someword* Drink<gram='acc'> interp (VerbDrinking.Drink);
+S -> Who<sp-agr[1],gram='anim'>* interp (VerbDrinking.Who) AnyWord* SDrVerb<sp-agr[1],gram="tran"> interp (VerbDrinking.Consuming) Someword* Drink<gram='acc'> interp (VerbDrinking.Drink); 
 S -> Noun<kwtype="емкость"> interp (VesselOfLiquid.Vess) AdjWord* Noun<gram="gen">* interp (VesselOfLiquid.Drink) ;
