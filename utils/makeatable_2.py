@@ -33,7 +33,7 @@ if __name__ == '__main__':
 	)
 	args = parser.parse_args()
 	with open(args.output, 'r') as output:
-		file_str = ''.join(output.readlines())
+		file_str = ''.join(output.readlines()).replace('</html>', '') + '</html>'
 		soup = BeautifulSoup(file_str, 'lxml')
 	motifs = [prepare_string(soup.select_one('a[name="{}"]'.format(tag['href'][1:])).text)[:-4] for tag in tqdm(soup.select('td > a'))]
 	data = list()
