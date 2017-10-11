@@ -6,8 +6,8 @@ TTextMinerConfig {
   PrettyOutput = "PrettyOutput.html"; // путь к файлу с отладочным выводом в удобном для чтения виде
 
   Input = {
-//    File = "MasterMargarita.txt"; // путь к входному файлу
-    Dir = "./MMtexts/2206"
+    File = "MasterMargarita.txt"; // путь к входному файлу
+//    Dir = "./MMtexts/2206"
   }
 
   Articles = [
@@ -16,7 +16,9 @@ TTextMinerConfig {
   ]
 
   Facts = [
-    { Name = "Drinking" }
+    { Name = "Drinking";
+    Name = "DrankPerson";
+    Name = "VerbDrinking"}
   ]
 
   Output = {

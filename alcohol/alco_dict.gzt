@@ -8,15 +8,26 @@ import "kwtypes.proto";        // kw-тип alco
 
 alco "алкоголь"
 {
-    key = { "alchogol.txt" type=FILE }
+    key = { "alc_drinks_names.txt" type=FILE }
 }
 
 alco "емкость"
 {
-    key = "рюмка" | "чаша" | "бокал" | "стопка"
+    key = { "alco_vessels.txt" type=FILE }
 }
 
-pers "персона"
+situ "алкоголизация"
 {
-    key = "кот" | "поэт" | "мастер" | "бегемот"
+    key = { "thematic_nouns.txt" type=FILE }
+}
+
+
+persadj "характеристика человека"
+{
+    key = { "thematic_ADJ.txt" type=FILE }
+}
+
+drverbs "пьяные глаголы"
+{
+    key = { "drinking_verbs.txt" type=FILE }
 }

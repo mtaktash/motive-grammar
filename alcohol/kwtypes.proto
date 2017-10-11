@@ -2,4 +2,7 @@ import "base.proto";
 import "articles_base.proto";
 
 message alco : TAuxDicArticle {};
-message pers : TAuxDicArticle {}
+message pers : TAuxDicArticle {};
+message situ : TAuxDicArticle {};
+message persadj : TAuxDicArticle {};
+message drverbs : TAuxDicArticle {};
