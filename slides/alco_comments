@@ -1,0 +1,15 @@
+Данные про алкоголь выведены с помощью самой сложной грамматики
+К мотиву мы подходили как к конструкции
+Пример:
+
+S -> Who<sp-agr[1],gram='anim'> interp (Drinking.Who) AnyWord* Consuming<sp-agr[1]> interp (Drinking.Consuming) Someword* Drink<gram='acc'> interp (Drinking.Drink);
+
+Who -> Noun | Word<gram="SPRO">;
+Drink -> Noun<kwtype=alco> ;
+Consuming -> Verb ;
+Someword -> Noun | Adj | Adv | OrdinalNumeral | Participle | Prep | Verb<gram="partcp"> | Verb<gram="ger"> | Comma | Hyphen | LBracket | RBracket | QuoteDbl | Word<gram="CONJ"> | Word<gram="INTJ"> | Word<gram="PART"> |  Word<gram="PR">;
+
+Сколько у нас правил? У нас 14 грамматический правил. 
+
+Мы использовали 6 словарей
+Словари: названия напитков, глаголы выпивания, глаголы алкогольного выпивания, посуда для выпивания, тематические существительные выпивания, пьяные прилагательные
