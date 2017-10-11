@@ -17,8 +17,8 @@ for line in lines:
 
 
 print(results)
-for fil in os.listdir('./2206'):
-    f1 = open('./2206/' + fil, 'r', 'utf-8')
+for fil in os.listdir('2206'):
+    f1 = open('2206/' + fil, 'r', 'utf-8')
     ft = f1.read()
 #    if fil == '372.txt':
 #        print(ft)
