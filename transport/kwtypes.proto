@@ -1,0 +1,4 @@
+TAuxDicArticle "глаголы_передвижения"
+{
+    key = { "verbs.txt" type=FILE }
+}

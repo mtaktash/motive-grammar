@@ -4,9 +4,12 @@
 MeansOfTransport -> 'трамвай' | 'автомобиль' | 'машина';
 MotionVerb -> 'идти' | 'бежать' | 'броситься' | 'двинуть' | 'ползти' | 
               'приближаться' | 'кидать' | 'бросать' | 'вести';
-TargetPrep -> 'до' | 'к' | 'ко' | 'в';
+TargetPrep -> 'до' | 'к' | 'ко' | 'в' | 'на';
+OriginPrep -> 'от' | 'из' | 'с';
 
-GeneralMotion -> Noun+ MotionVerb;
-TargetedMotion -> Adj<gram='им'>* Noun* MotionVerb AnyWord* TargetPrep Adj* Noun<gram='пр'>;
+NounOrPronoun -> Noun | Pronoun;
 
-S -> GeneralMotion;
+TargetedMotion -> Adj<gram='им', c-agr[1]>* NounOrPronoun<c-agr[1]>* 
+                  Adv* MotionVerb AnyWord* TargetPrep Adj<c-agr[2]>* Noun<gram='пр', c-agr[2]>;
+
+S -> TargetedMotion;
