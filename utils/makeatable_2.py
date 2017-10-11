@@ -36,14 +36,20 @@ if __name__ == '__main__':
 		file_str = ''.join(output.readlines()).replace('</html>', '') + '</html>'
 		soup = BeautifulSoup(file_str, 'lxml')
 	motifs = [prepare_string(soup.select_one('a[name="{}"]'.format(tag['href'][1:])).text)[:-4] for tag in tqdm(soup.select('td > a'))]
+	print(motifs)
 	data = list()
+	data2 = list()
 	for filename in glob.glob('{}/*.txt'.format(args.folder)):
 		q = 0
 		with open(filename) as file:
-			text = prepare_string(file.read())
+			text = prepare_string(''.join(file.readlines()))
 			for motif in motifs:
 				if motif in text:
 					q += 1
+					data2.append({
+						'text': int(filename[len(args.folder)+1:filename.find('.txt')]),
+						'motif': motif,
+					})
 			data.append({
 				'text': int(filename[len(args.folder)+1:filename.find('.txt')]),
 				'q': q,
@@ -51,3 +57,6 @@ if __name__ == '__main__':
 	df = pd.DataFrame(data)
 	df = df[['text', 'q']].sort_values(by='text')
 	df.to_csv('table.tsv', sep='\t', index=False)
+	df2 = pd.DataFrame(data2)
+	df2 = df2[['text', 'motif']].sort_values(by='text')
+	df2.to_csv('table2.tsv', sep='\t', index=False)
