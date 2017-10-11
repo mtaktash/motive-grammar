@@ -31,3 +31,8 @@ drverbs "пьяные глаголы"
 {
     key = { "drinking_verbs.txt" type=FILE }
 }
+
+sdrverbs "полупьяные глаголы"
+{
+    key = { "neutral_verbs.txt" type=FILE }
+}

@@ -6,3 +6,4 @@ message pers : TAuxDicArticle {};
 message situ : TAuxDicArticle {};
 message persadj : TAuxDicArticle {};
 message drverbs : TAuxDicArticle {};
+message sdrverbs : TAuxDicArticle {};

@@ -17,8 +17,9 @@ TTextMinerConfig {
 
   Facts = [
     { Name = "Drinking";
-    Name = "DrankPerson";
-    Name = "VerbDrinking"}
+//    Name = "DrankPerson";
+//    Name = "VerbDrinking"
+}
   ]
 
   Output = {
