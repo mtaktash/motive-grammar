@@ -2,8 +2,29 @@ encoding "utf8";               // указываем кодировку, в ко
 import "base.proto";           // подключаем описания protobuf-типов (TAuxDicArticle и прочих)
 import "articles_base.proto";  // Файлы base.proto и articles_base.proto встроены в компилятор.
                                // Их необходимо включать в начало любого gzt-словаря.
+import "facttypes.proto";
 // статья с нашей грамматикой:
-TAuxDicArticle "наша_первая_грамматика"
+TAuxDicArticle "глаголы_передвижения"
+{
+    key = { "verbs.txt" type=FILE }
+}
+
+TAuxDicArticle "транспорт"
+{
+    key = { "means_of_transport.txt" type=FILE }
+}
+
+/* TAuxDicArticle "предлоги_к"
+{
+    key = { "to_prepositions.txt" type=FILE }
+}
+
+TAuxDicArticle "предлоги_от"
+{
+    key = { "from_prepositions.txt" type=FILE }
+} */
+
+TAuxDicArticle "передвижение"
 {
     key = { "tomita:first.cxx" type=CUSTOM }
 }
