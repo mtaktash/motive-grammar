@@ -6,7 +6,7 @@ TTextMinerConfig {
   PrettyOutput = "PrettyOutput.html"; // путь к файлу с отладочным выводом в удобном для чтения виде
 
   Input = {
-  	Dir = "2206";
+  	Dir = "/Users/maria/github/motive-grammar/laugh/data/135089";
   }
 
   Articles = [
